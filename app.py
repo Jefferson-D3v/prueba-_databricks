@@ -21,7 +21,7 @@ try:
         password=PASSWORD,
         host=HOST,
         port=PORT,
-        dbname=DBNAME
+        dbname=DBNAME,
         sslmode="require"   # <- obligatorio para Supabase
     )
     print("Connection successful!")
