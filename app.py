@@ -109,7 +109,13 @@ if model is not None:
                 INSERT INTO table_iris (longitud_petalo, longitud_sepalo, ancho_petalo, ancho_sepalo, prediction)
                 VALUES (%s, %s, %s, %s, %s)
                 """,
-                (longitud_petalo, longitud_sepalo, ancho_petalo, ancho_sepalo, prediction)
+                (
+                    float(longitud_petalo),
+                    float(longitud_sepalo),
+                    float(ancho_petalo),
+                    float(ancho_sepalo),
+                    str(prediction)
+                )
             )
             connection.commit()
             cursor.close()
