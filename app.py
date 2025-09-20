@@ -4,7 +4,6 @@ import pickle
 import numpy as np
 import psycopg2
 # hola gola
-postgresql://postgres.vbeuhmiiygpljvqwqiyo:[YOUR-PASSWORD]@aws-1-us-east-2.pooler.supabase.com:5432/postgres
 USER = "postgres.vbeuhmiiygpljvqwqiyo" #os.getenv("user")
 PASSWORD = "alfre943553109"# os.getenv("password")
 HOST = "aws-1-us-east-2.pooler.supabase.com" #os.getenv("host")
