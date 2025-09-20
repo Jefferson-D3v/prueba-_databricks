@@ -106,10 +106,10 @@ if model is not None:
             cursor = connection.cursor()
             cursor.execute(
                 """
-                INSERT INTO table_iris (sepal_length, sepal_width, petal_length, petal_width, predicted_species)
+                INSERT INTO table_iris (longitud_petalo, longitud_sepalo, ancho_petalo, ancho_sepalo, prediction)
                 VALUES (%s, %s, %s, %s, %s)
                 """,
-                (sepal_length, sepal_width, petal_length, petal_width, predicted_species)
+                (longitud_petalo, longitud_sepalo, ancho_petalo, ancho_sepalo, prediction)
             )
             connection.commit()
             cursor.close()
