@@ -7,7 +7,7 @@ import psycopg2
 USER = "postgres.vbeuhmiiygpljvqwqiyo" #os.getenv("user")
 PASSWORD = "alfre943553109"# os.getenv("password")
 HOST = "aws-1-us-east-2.pooler.supabase.com" #os.getenv("host")
-PORT = "6543" #os.getenv("port")
+PORT = "5432" #os.getenv("port")6543
 DBNAME = "table_iris" #os.getenv("dbname")
 
 # Configuración de la página
