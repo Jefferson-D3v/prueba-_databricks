@@ -2,7 +2,6 @@ import streamlit as st
 import joblib
 import pickle
 import numpy as np
-postgresql://postgres.vbeuhmiiygpljvqwqiyo:[YOUR-PASSWORD]@aws-1-us-east-2.pooler.supabase.com:6543/postgres
 import psycopg2
 # hola gola
 USER = "postgres.vbeuhmiiygpljvqwqiyo" #os.getenv("user")
