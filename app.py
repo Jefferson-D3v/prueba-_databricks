@@ -8,7 +8,7 @@ import psycopg2
 
 USER = "postgres.vbeuhmiiygpljvqwqiyo" #os.getenv("user")
 PASSWORD = "SUPABASE_KEY"# os.getenv("password")
-HOST = "ws-1-us-east-2.pooler.supabase.com" #os.getenv("host")
+HOST = "aws-1-us-east-2.pooler.supabase.com" #os.getenv("host")
 PORT = "5432" #os.getenv("port")
 DBNAME = "postgres" #os.getenv("dbname")
 
