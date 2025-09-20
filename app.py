@@ -4,11 +4,12 @@ import pickle
 import numpy as np
 import psycopg2
 # hola gola
+postgresql://postgres.vbeuhmiiygpljvqwqiyo:[YOUR-PASSWORD]@aws-1-us-east-2.pooler.supabase.com:5432/postgres
 USER = "postgres.vbeuhmiiygpljvqwqiyo" #os.getenv("user")
 PASSWORD = "alfre943553109"# os.getenv("password")
 HOST = "aws-1-us-east-2.pooler.supabase.com" #os.getenv("host")
-PORT = "6543" #os.getenv("port")6543
-DBNAME = "table_iris" #os.getenv("dbname")
+PORT = "5432" #os.getenv("port")6543
+DBNAME = "postgres" #os.getenv("dbname")
 
 # Configuración de la página
 st.set_page_config(page_title="Predictor de Iris", page_icon="🌸")
