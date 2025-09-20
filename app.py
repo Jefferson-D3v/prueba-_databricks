@@ -70,15 +70,15 @@ if model is not None:
     st.header("Ingresa las características de la flor:")
     st.write(result)
 
-    sepal_length = st.number_input("Longitud del Sépalo (cm)", min_value=0.0, max_value=10.0, value=5.0, step=0.1)
-    sepal_width = st.number_input("Ancho del Sépalo (cm)", min_value=0.0, max_value=10.0, value=3.0, step=0.1)
-    petal_length = st.number_input("Longitud del Pétalo (cm)", min_value=0.0, max_value=10.0, value=4.0, step=0.1)
-    petal_width = st.number_input("Ancho del Pétalo (cm)", min_value=0.0, max_value=10.0, value=1.0, step=0.1)
+    longitud_sepalo = st.number_input("Longitud del Sépalo (cm)", min_value=0.0, max_value=10.0, value=5.0, step=0.1)
+    ancho_sepalo = st.number_input("Ancho del Sépalo (cm)", min_value=0.0, max_value=10.0, value=3.0, step=0.1)
+    longitud_petalo = st.number_input("Longitud del Pétalo (cm)", min_value=0.0, max_value=10.0, value=4.0, step=0.1)
+    ancho_petalo = st.number_input("Ancho del Pétalo (cm)", min_value=0.0, max_value=10.0, value=1.0, step=0.1)
     
     # Botón de predicción
     if st.button("Predecir Especie"):
         # Preparar datos
-        features = np.array([[sepal_length, sepal_width, petal_length, petal_width]])
+        features = np.array([[longitud_sepalo, ancho_sepalo, longitud_petalo, ancho_petalo]])
         
         # Estandarizar
         features_scaled = scaler.transform(features)
