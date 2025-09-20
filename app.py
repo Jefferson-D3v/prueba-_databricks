@@ -13,6 +13,8 @@ DBNAME = "table_iris" #os.getenv("dbname")
 # Configuración de la página
 st.set_page_config(page_title="Predictor de Iris", page_icon="🌸")
 # Connect to the database
+result = None  # <- inicializamos
+
 try:
     connection = psycopg2.connect(
         user=USER,
