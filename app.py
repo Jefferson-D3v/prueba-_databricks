@@ -89,8 +89,36 @@ if model is not None:
         
         st.success(f"Especie predicha: **{predicted_species}**")
         st.write(f"Confianza: **{max(probabilities):.1%}**")
+
+          # Guardar en la base de datos
+        try:
+            connection = psycopg2.connect(
+                user=USER,
+                password=PASSWORD,
+                host=HOST,
+                port=PORT,
+                dbname=DBNAME
+            )
+            cursor = connection.cursor()
+            cursor.execute(
+                """
+                INSERT INTO predicciones_iris (sepal_length, sepal_width, petal_length, petal_width, predicted_species)
+                VALUES (%s, %s, %s, %s, %s)
+                """,
+                (sepal_length, sepal_width, petal_length, petal_width, predicted_species)
+            )
+            connection.commit()
+            cursor.close()
+            connection.close()
+            st.success(" Datos guardados en Supabase correctamente")
+        except Exception as e:
+            st.error(f"Error al guardar en la base de datos: {e}")
         
         # Mostrar todas las probabilidades
         st.write("Probabilidades:")
         for species, prob in zip(target_names, probabilities):
             st.write(f"- {species}: {prob:.1%}")
+
+
+
+
