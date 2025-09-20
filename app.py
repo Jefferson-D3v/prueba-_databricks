@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 import psycopg2
 
-postgresql://postgres.vbeuhmiiygpljvqwqiyo:[YOUR-PASSWORD]@aws-1-us-east-2.pooler.supabase.com:5432/postgres
+#ostgresql://postgres.vbeuhmiiygpljvqwqiyo:[YOUR-PASSWORD]@aws-1-us-east-2.pooler.supabase.com:5432/postgres
 
 USER = "postgres.vbeuhmiiygpljvqwqiyo" #os.getenv("user")
 PASSWORD = "SUPABASE_KEY"# os.getenv("password")
